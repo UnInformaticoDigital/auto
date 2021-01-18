@@ -56,16 +56,15 @@ createtable() {
 	echo "FIELD nº $i NAME"
         read field
         echo ""
-        fieldx="$field$(echo $i)"
         echo "- - - - - - - - - - - - - - - - "
         
         echo "DATA TYPE & CHARS:"
         read datatype
         echo ""
         if [ $i -eq 1 ]; then
-                fields="$fieldx $datatype"
+                fields="$field $datatype"
         elif [ $i -gt 1 ] || [ $i -eq $nfields ]; then
-                fields="$fields , $fieldx $datatype"
+                fields="$fields , $field $datatype"
         fi
         
         i=$((i+1))      
