@@ -25,7 +25,7 @@ createdb(){
     echo "DATABASE NAME:"
     read dbname
     echo ""
-    mysql -u admin -p -h localhost -e 'create database $dbname;'
+    mysql -u admin -p -h localhost -e "create database $dbname;"
     echo ""
     echo "> CREATE TABLES NOW ? y/n"
     read ch
