@@ -41,6 +41,9 @@ createtable() {
     echo "DB NAME:"
     read dbname
     echo ""
+    echo "- - - - - - - - - - -"
+    echo "TABLE NAME?"
+    read tbname
     echo "-----------------------------"
     echo "Nº FIELDS:"
     read nfields
@@ -50,8 +53,6 @@ createtable() {
     while [ $i -le $nfields ]
     do
         echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-        echo "TABLE NAME?"
-	read tbname
 	echo "FIELD nº $i NAME"
         read field
         echo ""
