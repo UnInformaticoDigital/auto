@@ -41,8 +41,12 @@ createdb(){
     echo "#########################"
     echo "DATABASE NAME:"
     read dbname
+    newdbQuery="create database $dbname;"
     echo ""
-    mysql -u admin -p -h localhost -e "create database $dbname;"
+    echo "---"
+    echo "sql> $newdbQuery"
+    echo "---"
+    mysql -u admin -p -h localhost -e "$newdbQuery"
     echo ""
     echo "> CREATE TABLES NOW ? y/n"
     read ch
@@ -89,9 +93,10 @@ createtable() {
      
      done
      key
-     query="create table $tbname ($fields);"
-     echo $query
-     mysql -u admin -p -h localhost -e "use $dbname; $query"
+     newtable="create table $tbname ($fields);"
+     echo "----"
+     echo "sql> $newtable"
+     mysql -u admin -p -h localhost -e "use $dbname; $newtable"
      echo "MORE TABLES ? y/n"
      read ch
      if [ $ch = y ]; then
