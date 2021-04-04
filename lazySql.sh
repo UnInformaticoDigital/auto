@@ -93,7 +93,7 @@ createdb(){
 createtable() {
     echo "++++++++++++++++++++++++++++++++"
     askDb
-	askTb
+	askTab
     echo "-----------------------------"
     echo "Nº FIELDS:"
     read nfields
